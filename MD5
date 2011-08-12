@@ -1,0 +1,14 @@
+79240e6f9732523c3a4cc34b5baa5c1b *DESCRIPTION
+e684eee6a6dbfa5e9c9387d9de5f4b43 *NAMESPACE
+b0343f75e749dbfe428be70a9a1c4a8f *R/Enum-class.R
+b6fae3b0b13fd9ca2e5c19298fcf126c *R/Properties-class.R
+adb03b23ce24dd8055c03259fe45fb41 *R/comp-classes.R
+d41d8cd98f00b204e9800998ecf8427e *README
+f08d6a1bf75408ebe345c1219460b6c5 *inst/examples/Enum.R
+de5e1b8060bc539f98d6b44d516a2dff *inst/examples/setNumericWithRange.R
+83186ec7d70c57854826ddd584772093 *inst/examples/setProperties.R
+2bd01a438f613950eaccbff0103c9ba6 *man/Enum-class.Rd
+f488cbc8237361065072302f43eadc92 *man/Properties.Rd
+2ae6f1a081c80ad643144220b29f086f *man/as.list-methods.Rd
+aa70874d8642cdcc1756aa610cb866d0 *man/comp.Rd
+f9ff47ee4ccb7380162b2487c8f32d3a *man/setNumericWithRange.Rd
