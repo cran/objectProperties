@@ -1,57 +1,35 @@
-\name{setProperties}
-\alias{setProperties}
-\title{Properties class}
-\usage{setProperties(prefix, properties, contains=character(), where=topenv(parent.frame()),
-    signalName="changed")
+\name{properties}
+\alias{properties}
+\title{Properties signaling fileds}
+\usage{properties(fields=list(), prototype=list())
 }
-\description{Encapsulates the properties for an operation.}
-\details{Each type of object should have a corresponding subclass of Properties.
-\code{setProperties} is a convenient subclass generator for class
-\code{Properties}, user could pass a list of different types of variables
-and return a specific \code{Properties} subclass generator, this new defined object
-store those properties as signaling fields, so it's able to connect signal to
-listen to individual property or the set as a whole. In this way, validation is
-enabled when user try to set the properties to new value.
+\description{Convenience function for defining a set of reference class fields
+that signals when set.}
+\details{When constructing signaling fields in this way, each field has the
+ability to register its own signal and at the same time, there is
+one top level signal which could be emitted no matter which field
+changes. Please see the example to learn to register global signal
+and individual signal.}
+\value{A list that is easily concatenated into the field list}
+\author{Michael Lawrence, Tengfei Yin}
+\arguments{\item{fields}{list of names of the field and associated fields class}
+\item{prototype}{A list of values declaring a default value for a field.}
+}
+\examples{## we could pass prototype as in S4
+GPars.gen <- setRefClass("GraphicProperties",
+                fields = properties(fields = list(size = "numeric",
+                                                  color = "character"),
+                                    prototype = list(size =1,
+                                                     color = "red")))
 
-\code{Properties} object has following methods
-\describe{
-\item{properties()}{Return the defined properties name and class.
-You can also coerce the \code{Properties} object to a list by calling
-as.list on the object}
-}}
-\value{A reference class generator for subclass.}
-\alias{Properties-class}
-\alias{setProperties}
-\author{Tengfei Yin, Michael Lawrence}
-\arguments{\item{prefix}{Prefix for new subclass of \code{Properties}, e.g. if prefix is
-"Graphic", the new subclass name would be \code{GraphicProperties}.}
-\item{properties}{A list of properties with the names
-and class it belongs to, those properties are set as signaling fields.}
-\item{contains}{What class does this class extended besides \code{Properties}.}
-\item{where}{the environment in which to store or remove the definition.
-Defaults to the top-level environment of the calling function
-(the global environment for ordinary computations, and the
-environment or namespace of a package in the source code for
-that package).}
-\item{signalName}{Default name is "changed". A global signal for properties are
-defined with this specified name, whichever the properties changed, this signal
-will be emitted and the name of trigered field will be captured. Please check the
-example.}
-}
-\examples{require(objectProperties)
-gplist <- list(size = "numeric",
-               color = "character")
-GraphPars.gen <- setProperties("Graph", gplist, signalName = "GraphSignal")
-obj <- GraphPars.gen$new(size = 1, color = "red")
-class(obj)
-## show the properties
-obj$properties()
-## convert the properties to a list
-as(obj, "list")
-as.list(obj)
-## register global signals
-obj$GraphSignal$connect(function(name){
-  cat(name, "changed\n")
+obj <- GPars.gen$new()
+## since it's not PropertySet, no global signal
+## let's register individual signal
+obj$sizeChanged$connect(function(){
+  print("size changed")
 })
-obj$size <- 2}
+## emit signal
+obj$size <- 3
+## no signal
+obj$color <- "black"}
 
