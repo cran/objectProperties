@@ -27,6 +27,7 @@ The construction of these objects has validation with them, please see the examp
 \author{Tengfei Yin, Michael Lawrence}
 \arguments{\item{object}{object to be coerced}
 }
+\value{An object of the corresponding class}
 \examples{## Constructors
 require(objectProperties)
 obj <- PositiveInteger(1)
