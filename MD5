@@ -1,4 +1,4 @@
-fe8de77ba236e9d75309c2ae8a423484 *DESCRIPTION
+88bd99273ddb37e860877c24306dbc42 *DESCRIPTION
 669b695b018f79af4b50f1d45f9601bf *NAMESPACE
 a7d3eec54e752d2e797c52bcbce368d2 *NEWS
 9312e3857125bb51edb86469487dc299 *R/Enum-class.R
@@ -10,7 +10,7 @@ dd7707e412638826c675a53178f169f6 *inst/examples/PropertySet.R
 031c00bddb9a34a73d2d477093bf50c5 *inst/examples/properties.R
 892c81ed50e4369219ed7eb0aa8699c7 *inst/examples/setNumericWithRange.R
 2dd98c6ae5460f1a36f8dcc6eeb2efc4 *man/Enum-class.Rd
-7c71c4c873e3f9e266f8374908151286 *man/PropertySet-class.Rd
+ba730f68261a0c8b157fd602394ff267 *man/PropertySet-class.Rd
 0e705cb0d2ce07ec7fc2cf24950a3016 *man/as.list-methods.Rd
 84a7720404c3ae3890f2c6c76cb2a789 *man/comp.Rd
 ac02dfac529a5b53110079dc9447656f *man/properties.Rd

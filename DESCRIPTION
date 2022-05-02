@@ -7,12 +7,12 @@ Authors@R: c(person("Tengfei", "Yin", role = c("aut")),
 Maintainer: Michael Lawrence <michafla@gene.com>
 Depends: R (>= 2.12), objectSignals (>= 0.10.2)
 Imports: methods
-Version: 0.6.7
+Version: 0.6.8
 License: GPL (>= 2)
 Collate: PropertySet-class.R Enum-class.R comp-classes.R
 NeedsCompilation: no
-Packaged: 2021-07-21 17:31:12 UTC; michafla
+Packaged: 2022-05-02 22:37:10 UTC; michafla
 Author: Tengfei Yin [aut],
   Michael Lawrence [aut, cre]
 Repository: CRAN
-Date/Publication: 2021-07-22 07:00:04 UTC
+Date/Publication: 2022-05-02 23:02:03 UTC

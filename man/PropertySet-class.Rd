@@ -15,10 +15,10 @@ ensures that all fields of the subclass are defined via
 a \code{PropertySet} object:
 
 \describe{
-\item{}{\code{x$properties()}: Return the classes of the properties as a
+\item{\code{x$properties()}}{Return the classes of the properties as a
 named character vector. Compare to the \code{fields} method on
 \link[methods:setRefClass]{a reference class generator}}.
-\item{}{\code{as.list(x)}: Returns a named list of the property values.}
+\item{\code{as.list(x)}}{Returns a named list of the property values.}
 }
 
 When any property in the set changes, the \code{changed(name)}
